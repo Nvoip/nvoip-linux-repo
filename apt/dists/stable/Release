@@ -1,0 +1,12 @@
+Origin: Nvoip
+Label: Nvoip
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: all
+Components: main
+Description: Nvoip Linux Repository
+Date: Thu, 30 Apr 2026 22:53:43 +0000
+SHA256:
+ 5a1532f1904958297f01314928bf5a3e851fca5a43483a6468b24793fc46d70b 456 main/binary-all/Packages
+ 47539c0fc09d522d4d34a830b83274606a50e8f18eab2318e75b89149bc71529 337 main/binary-all/Packages.gz
