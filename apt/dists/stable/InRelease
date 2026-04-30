@@ -1,0 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: Nvoip
+Label: Nvoip
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: all
+Components: main
+Description: Nvoip Linux Repository
+Date: Thu, 30 Apr 2026 22:53:43 +0000
+SHA256:
+ 5a1532f1904958297f01314928bf5a3e851fca5a43483a6468b24793fc46d70b 456 main/binary-all/Packages
+ 47539c0fc09d522d4d34a830b83274606a50e8f18eab2318e75b89149bc71529 337 main/binary-all/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQJPBAEBCAA5FiEEzWe41daYdo3sUgUTM4vN2iNh1hQFAmnz5YcbFIAAAAAABAAO
+bWFudTIsMi41KzEuMTIsMCwzAAoJEDOLzdojYdYUGTsP/2YU7Hv+Z9U+6jUXpu4h
+5Wx89XJ1e+etQVEQDp600O2sP1WvK4bIMWvJNddHc/SWKmIHHY4IelryNx+bXQj8
+nl9bIDFOj0PWlUbrvZpeEXeU2QlrYyRDoYWT6aZjfSWPfmh1jMncF13hPVZ4HE1B
+PSSh86oFV0CoXJilHiMLEuQW4V7UvgfuQibHgWwidSnooMxaKxuXayg1b7JVpT77
+xMInMAA18C4mAQGBCmkLNm9rco1AkZhY8eP34RKMBzr3PGTr3VeUpjwtGhSxjYB9
++3asKlxThYm2RsNVWjvBXjgfLz9SqKITOB3BWp0d0Kzpz2Tkq6wuOARtMfJmTExr
+GstsnItCVAKanrTYxA0jpupJ+yGn/zrUTP53y7+ZWeZng4EX1PGJGUShVsBobRpV
+8Q19hhS8CONjbHatzQtu7pzG/dRitS9zvspq+r5sKdns4BBu8HSSQdsjPft3X29+
+VuBGHL3ejtnVQFBlSNDE1ihY+ukgtiAmPvhlIr+i0MYLo43ofwVtSfbXuK5ACaCZ
+BhRk04xZj1zzP2kdNEVTqUuKVYPC3GOYD4IF+X2lqKTf5kBCDtGgNWxuYvvJRdZw
+EHcTVuMMwBh06cBWV7IQg+bj3lEOUflAscnHgZpdeQgPOJzPtJ03Mn8BI0j6Dx0o
+TsNRb50GsAs1eRRQ9yJlyp2/
+=qsjr
+-----END PGP SIGNATURE-----
