@@ -1,10 +1,10 @@
 Package: nvoip-pabx-provisioner
-Version: 0.1.0
+Version: 0.1.4
 Architecture: all
 Maintainer: Nvoip <dev@nvoip.com.br>
-Filename: pool/main/n/nvoip-pabx-provisioner/nvoip-pabx-provisioner_0.1.0_all.deb
+Filename: pool/main/n/nvoip-pabx-provisioner/nvoip-pabx-provisioner_0.1.4_all.deb
 Size: 8312
-SHA256: 61a0d2bfeba9496e5cd6b03892023018db566746fbde6fec54527a4df60ce34c
+SHA256: f571cef44560ccfdc788fff9c07402968e8cd2c305ef721ccda1582f57f2aa07
 Section: admin
 Priority: optional
 Description: Provisionador oficial Nvoip para trunks SIP em PABX Linux

@@ -28,7 +28,7 @@ sudo tee /etc/yum.repos.d/nvoip.repo >/dev/null <<'EOF'
 name=Nvoip Linux Repository
 baseurl=https://nvoip.github.io/nvoip-linux-repo/yum
 enabled=1
-gpgcheck=0
+gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://nvoip.github.io/nvoip-linux-repo/keys/nvoip-linux-repo.asc
 EOF
