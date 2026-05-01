@@ -6,7 +6,7 @@ Version: 1.0
 Architectures: all
 Components: main
 Description: Nvoip Linux Repository
-Date: Fri, 01 May 2026 00:15:35 +0000
+Date: Fri, 01 May 2026 18:26:07 +0000
 SHA256:
- c41d18071b660afcf048d6044e3e9d60b3f13affb28a6a79dbd5e4c39a34ac91 456 main/binary-all/Packages
- 32b128c86bde2fc62e9ce94698edc813b23cdcbee4aa01c195da6e063a55e61c 336 main/binary-all/Packages.gz
+ 6b1ecbc402a19d9f76fec3dd455e8456c7aec512b0e9d5de654d4458992ba6f7 456 main/binary-all/Packages
+ 41010e06da259b10d5048e076305b52072f850c4fa28462af036e76e0626d5da 337 main/binary-all/Packages.gz

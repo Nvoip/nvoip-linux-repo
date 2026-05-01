@@ -3,21 +3,21 @@
   <package type="rpm">
     <name>nvoip-pabx-provisioner</name>
     <arch>noarch</arch>
-    <version epoch="0" ver="0.1.4" rel="1"/>
-    <checksum type="sha256" pkgid="YES">6f6b0f23c51f64418e1403c68993d259bdece4f65ceaa0aef6970273cd037ad0</checksum>
+    <version epoch="0" ver="0.1.5" rel="1"/>
+    <checksum type="sha256" pkgid="YES">d6d8624ff4b3420937365a644de700ab94e3abbc78b7b95e35de247bb7e72590</checksum>
     <summary>Provisionador oficial Nvoip para trunks SIP em PABX Linux</summary>
     <description>Configura trunk SIP Nvoip em Asterisk, FreePBX, Issabel, FreeSWITCH e FusionPBX.</description>
     <packager>Nvoip</packager>
     <url>https://github.com/Nvoip/nvoip-pabx-provisioner</url>
-    <time file="1777594500" build="1777594500"/>
-    <size package="15277" installed="15277" archive="15277"/>
-    <location href="packages/noarch/nvoip-pabx-provisioner-0.1.4-1.noarch.rpm"/>
+    <time file="1777659960" build="1777659960"/>
+    <size package="16186" installed="16186" archive="16186"/>
+    <location href="packages/noarch/nvoip-pabx-provisioner-0.1.5-1.noarch.rpm"/>
     <format>
       <rpm:license xmlns:rpm="http://linux.duke.edu/metadata/rpm">MIT</rpm:license>
       <rpm:vendor xmlns:rpm="http://linux.duke.edu/metadata/rpm">Nvoip</rpm:vendor>
       <rpm:group xmlns:rpm="http://linux.duke.edu/metadata/rpm">Applications/System</rpm:group>
       <rpm:buildhost xmlns:rpm="http://linux.duke.edu/metadata/rpm">github.com</rpm:buildhost>
-      <rpm:sourcerpm xmlns:rpm="http://linux.duke.edu/metadata/rpm">nvoip-pabx-provisioner-0.1.4-1.src.rpm</rpm:sourcerpm>
+      <rpm:sourcerpm xmlns:rpm="http://linux.duke.edu/metadata/rpm">nvoip-pabx-provisioner-0.1.5-1.src.rpm</rpm:sourcerpm>
       <rpm:header-range xmlns:rpm="http://linux.duke.edu/metadata/rpm" start="0" end="0"/>
     </format>
   </package>
