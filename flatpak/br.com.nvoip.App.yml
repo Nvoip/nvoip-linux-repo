@@ -1,0 +1,70 @@
+app-id: br.com.nvoip.App
+base: io.qt.qtwebengine.BaseApp
+base-version: '6.10'
+runtime: org.kde.Platform
+runtime-version: '6.10'
+sdk: org.kde.Sdk
+command: nvoip
+
+finish-args:
+  # Share IPC namespace with host
+  - --share=ipc
+  # Display windows with Wayland (fallback to X11 otherwise)
+  - --socket=wayland
+  - --socket=fallback-x11
+  # GPU acceleration for QtWebEngine
+  - --device=dri
+  # Audio access (PJSIP uses ALSA routed to PulseAudio/PipeWire)
+  - --socket=pulseaudio
+  # Network access (SIP/RTP, Nvoip API and chat)
+  - --share=network
+  # System keyring for the OAuth refresh token (QtKeychain)
+  - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.kde.kwalletd6
+  - --talk-name=org.kde.kwalletd5
+  # Notifs & tray icons
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.StatusNotifierWatcher
+  # Qt environment variables
+  - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
+
+cleanup:
+  - '*.a'
+  - '*.la'
+  - /lib/pkgconfig
+  - /lib/cmake
+  - /lib/mkspecs
+  - /include
+  - /share/man
+  - /share/doc
+  - /share/cmake
+  - /share/pkgconfig
+
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
+
+modules:
+  - name: nvoip
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_LIBDIR=lib
+      - -DNVOIP_BUILD_LINUX_APP=ON
+      - -DNVOIP_BUILD_WINDOWS_APP=OFF
+      - -DNVOIP_BUILD_CLI=OFF
+      - -DBUILD_TESTING=OFF
+
+    sources:
+      - type: git
+        url: https://github.com/Nvoip/nvoip-softphone.git
+        tag: linux-0.2.8
+        commit: a47ce1cbd9675391f5742eb33a9ccfa1a8aa3fe9
+        x-checker-data:
+          type: git
+          tag-pattern: ^linux-([\d.]+)$
+    modules:
+      # Secret Service / KWallet access
+      - dependencies/qtkeychain.yml
+      # SIP stack
+      - dependencies/pjproject.yml

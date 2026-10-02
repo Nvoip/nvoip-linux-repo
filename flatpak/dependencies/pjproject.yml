@@ -1,0 +1,19 @@
+name: pjproject
+buildsystem: simple
+build-commands:
+  - printf '#define PJ_HAS_IPV6 1\n' > pjlib/include/pj/config_site.h
+  # Audio-only build, matching scripts/bootstrap-pjsip-linux.sh in nvoip-softphone
+  - CFLAGS='-fPIC -O2' CXXFLAGS='-fPIC -O2' ./configure --prefix=/app --disable-video
+    --disable-v4l2 --disable-openh264 --disable-ffmpeg --disable-libyuv --disable-sdl
+  - make dep
+  - make -j${FLATPAK_BUILDER_N_JOBS}
+  - make install
+sources:
+  - type: archive
+    url: https://github.com/pjsip/pjproject/archive/refs/tags/2.17.tar.gz
+    sha256: 065fe06c06788d97c35f563796d59f00ce52fe9558a52d7b490a042a966facce
+    x-checker-data:
+      type: json
+      url: https://api.github.com/repos/pjsip/pjproject/releases/latest
+      version-query: .tag_name
+      url-query: '"https://github.com/pjsip/pjproject/archive/refs/tags/" + $version + ".tar.gz"'

@@ -60,6 +60,10 @@ sudo dnf install nvoip-pabx-provisioner
 
 Run `scripts/build-repo.py` after adding or replacing packages.
 
+## Flatpak
+
+The Nvoip desktop app manifest (`br.com.nvoip.App`) lives in `flatpak/`. See `flatpak/README.md`.
+
 ## Signing
 
 Public key fingerprint:
