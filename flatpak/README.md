@@ -1,11 +1,12 @@
 # Nvoip App Flatpak
 
-Flatpak manifest for the Nvoip Linux app (`br.com.nvoip.App`), built from
-[`Nvoip/nvoip-softphone`](https://github.com/Nvoip/nvoip-softphone) at tag `linux-0.2.8`.
+Flatpak manifest for the Nvoip Linux app (`br.com.nvoip.App`), built from the public Linux source package
+`nvoip-linux-0.2.9-src.tar.gz` published in the
+[`linux-0.2.9` release](https://github.com/Nvoip/nvoip-app-releases/releases/tag/linux-0.2.9) of `Nvoip/nvoip-app-releases`.
 
 - `br.com.nvoip.App.yml`: main manifest (KDE 6.10 runtime + `io.qt.qtwebengine.BaseApp`).
 - `dependencies/qtkeychain.yml`: QtKeychain 0.15.0, stores the refresh token in the system keyring.
-- `dependencies/pjproject.yml`: audio-only PJSIP 2.17, same options as `scripts/bootstrap-pjsip-linux.sh` in the softphone repo.
+- `dependencies/pjproject.yml`: audio-only PJSIP 2.17.
 
 ## Local Build
 
@@ -16,20 +17,16 @@ flatpak-builder --user --install --force-clean build-dir flatpak/br.com.nvoip.Ap
 flatpak run br.com.nvoip.App
 ```
 
-`nvoip-softphone` is a private repository, so `flatpak-builder` clones it with the machine's Git credentials.
-
 ## New Release
 
-1. Update `tag` and `commit` of the `nvoip-softphone` source in `br.com.nvoip.App.yml`.
-2. Make sure the `<release>` in `installer/linux/br.com.nvoip.App.metainfo.xml` matches the `CMakeLists.txt` version (CMake fails otherwise).
+When a new `nvoip-linux-<version>-src.tar.gz` is published in a `linux-<version>` release of `Nvoip/nvoip-app-releases`,
+update `url` and `sha256` of the `nvoip` module source in `br.com.nvoip.App.yml`. The `sha256` is the value in the
+`.sha256` file published next to the package.
 
 ## Flathub
 
 Copy `br.com.nvoip.App.yml` and `dependencies/` to the root of a pull request against the `new-pr` branch of
-`flathub/flathub`. Before that:
-
-- The source must be public: Flathub builders cannot fetch the private `nvoip-softphone` repository.
-- The metainfo must pass the Flathub linter (`<developer>`, screenshots and the other required fields):
+`flathub/flathub`. The metainfo must pass the Flathub linter (screenshots and the other required fields):
 
 ```sh
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest flatpak/br.com.nvoip.App.yml

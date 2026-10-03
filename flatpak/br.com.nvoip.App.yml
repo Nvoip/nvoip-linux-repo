@@ -56,13 +56,14 @@ modules:
       - -DBUILD_TESTING=OFF
 
     sources:
-      - type: git
-        url: https://github.com/Nvoip/nvoip-softphone.git
-        tag: linux-0.2.8
-        commit: a47ce1cbd9675391f5742eb33a9ccfa1a8aa3fe9
+      - type: archive
+        url: https://github.com/Nvoip/nvoip-app-releases/releases/download/linux-0.2.9/nvoip-linux-0.2.9-src.tar.gz
+        sha256: b4b9963e42421749e810270ac23f12bb4be3c44b3c5b4a147faf0d7c493ccf74
         x-checker-data:
-          type: git
-          tag-pattern: ^linux-([\d.]+)$
+          type: json
+          url: https://api.github.com/repos/Nvoip/nvoip-app-releases/releases
+          version-query: '[.[] | select(.tag_name | test("^linux-[0-9.]+$"))][0].tag_name | sub("^linux-"; "")'
+          url-query: '"https://github.com/Nvoip/nvoip-app-releases/releases/download/linux-" + $version + "/nvoip-linux-" + $version + "-src.tar.gz"'
     modules:
       # Secret Service / KWallet access
       - dependencies/qtkeychain.yml
